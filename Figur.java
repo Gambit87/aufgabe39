@@ -43,13 +43,9 @@ abstract class Figur implements Comparable {
      *         das angegebene Objekt ist.
      */
     public int compareTo(Object x) {
-        Figur temp = null;
+        // Führt bei Typunverträglichkeit direkt zu ClassCastException
+        Figur temp = (Figur) x;
         double differenz;
-        if (x instanceof Figur) {
-            temp = (Figur) x;
-        } else {
-            throw new ClassCastException();
-        }
         differenz = this.inhalt() - temp.inhalt();
         if (Math.abs(differenz) < EPS) {
             return 0;
