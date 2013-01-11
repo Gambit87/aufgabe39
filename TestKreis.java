@@ -22,19 +22,24 @@ public class TestKreis {
         k1 = new Kreis(p1, r);
         if (k1 != null) {
             System.out.println("Konstruktor ok");
+            System.out.println("k1: " + k1.toString());
         } else {
             System.out.println("Konstruktor nicht ok");
         }
         k2 = (Kreis) k1.clone();
         if (k2 != null && k1 != k2 && k1.equals(k2)) {
             System.out.println("clone ok");
+            System.out.println("k1: " + k1.toString());
+            System.out.println("k2: " + k2.toString());
         } else {
             System.out.println("clone nicht ok");
         }
+        System.out.println("k2: " + k2.toString());
         k2.setP(p2);
         k2.setR(2.0);
         if (p2.equals(k2.getP()) && k2.getR() == 2.0) {
             System.out.println("setter und getter ok");
+            System.out.println("k2: " + k2.toString());
         } else {
             System.out.println("setter und getter nicht ok");
         }
@@ -52,12 +57,14 @@ public class TestKreis {
         s = String.format("%.5f", k1.inhalt());
         if (s.equals("3,14159")) {
             System.out.println("inhalt ok");
+            System.out.println("Inhalt von k1: " + k1.inhalt());
         } else {
             System.out.println("inhalt nicht ok");
         }
         s = String.format("%.5f", k1.umfang());
         if (s.equals("6,28319")) {
             System.out.println("umfang ok");
+            System.out.println("Umfang von k1: " + k1.umfang());
         } else {
             System.out.println("umfang nicht ok");
         }
