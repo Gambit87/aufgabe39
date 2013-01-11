@@ -32,7 +32,7 @@ public class TestFigur {
         System.out.println("Inhalt f3: " + inhalt3);
         try {
             if (f1.compareTo(f1) == 0) {
-                System.out.println("f1 ist genauso groß wie f1");
+                System.out.println("f1 ist so groß wie f1");
             } else {
                 System.out.println("f1 ist nicht genauso groß wie f1?!");
             }
