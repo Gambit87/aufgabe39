@@ -35,6 +35,7 @@ public class Test {
         p2 = new Punkt(0.500, 0.500);
         p3 = new Punkt(3.750, -7.625);
         f = new Dreieck(p1, p2, p3);
+        // Strecke {p1, p2} = 1/2*s (siehe Heron-Formel) und daher A=0
         System.out.printf("%9.5f%n", f.inhalt());
         System.out.printf("%9.5f%n", f.umfang());
     }
